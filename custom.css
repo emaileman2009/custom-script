@@ -32,6 +32,11 @@ body {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+.becomePremium_btn {
+ background: #3865e5;   
+    
+}
+
 /* popup Content */
 .payForDetails_popup_content {
     background-color: #fefefe;
