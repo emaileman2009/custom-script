@@ -5,13 +5,13 @@
 var extendBody = function adElementToBody(){
   
   this.$getPremium_btn = $([
-    "<button data-isPremium='false'>",
+    "<button data-isPremium='false' class='becomePremium_btn'>",
       "Become Premium",
     "</button>",
   ].join("\n"));
   
   var filterSection = document.getElementsByClassName('col-3 visible-tablet')[0]
-  filterSection..appendChild(this.$getPremium_btn[0]);
+  filterSection.appendChild(this.$getPremium_btn[0]);
   
   
   
