@@ -1,21 +1,32 @@
-
-
-
-
-var extendBody = function adElementToBody(){
+var addGetPremium_btn = funtion {
+  this.$getPremium_btn;
+  if ( sessionStorage.getItem('premiumUser') ){
+    $getPremium_btn = $([
+      "<button id='getPremium_btn' data-isPremium='true' class='becomePremium_btn'>",
+        "Enjoy! You Are Premium",
+      "</button>",
+    ].join("\n"));    
+  }else{
+    $getPremium_btn = $([
+      "<button id='getPremium_btn' data-isPremium='false' class='becomePremium_btn'>",
+        "Become Premium",
+      "</button>",
+    ].join("\n"));
+  }
   
-  this.$getPremium_btn = $([
-    "<button data-isPremium='false' class='becomePremium_btn'>",
-      "Become Premium",
-    "</button>",
-  ].join("\n"));
+  $(this.$getPremium_btn[0]).click(function( event ) {
+              event.preventDefault();
+              essionStorage.setItem('premiumUser',true)
+              location.reload();            
+  });
   
   var filterSection = document.getElementsByClassName('col-3 visible-tablet')[0]
   filterSection.appendChild(this.$getPremium_btn[0]);
   
-  
-  
-  this.$payForDetails_popup = $([
+}
+
+var addPayForDetails_popup function = {
+   this.$payForDetails_popup = $([
       "<div id='payForDetails_popup' class='payForDetails_popup'>",
         "<!-- Modal content -->",
         "<div class='payForDetails_popup_content'>",
@@ -40,7 +51,13 @@ var extendBody = function adElementToBody(){
           popup.style.display = "none";
       }
   }
-  
+}
+
+
+
+var extendBody = function adElementToBody(){
+  addGetPremium_btn();
+  addPayForDetails_popup();
 }
 
 
