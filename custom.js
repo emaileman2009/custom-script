@@ -1,4 +1,4 @@
-var addGetPremium_btn = funtion {
+var addGetPremium_btn = funtion () {
   this.$getPremium_btn;
   if ( sessionStorage.getItem('premiumUser') ){
     $getPremium_btn = $([
@@ -25,7 +25,7 @@ var addGetPremium_btn = funtion {
   
 }
 
-var addPayForDetails_popup function = {
+var addPayForDetails_popup = funtion() {
    this.$payForDetails_popup = $([
       "<div id='payForDetails_popup' class='payForDetails_popup'>",
         "<!-- Modal content -->",
