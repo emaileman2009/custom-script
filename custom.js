@@ -16,7 +16,7 @@ var addGetPremium_btn = function () {
   
   $(this.$getPremium_btn[0]).click(function( event ) {
               event.preventDefault();
-              if(event.currentTarget.getAttribute('data-ispremium')){
+              if(event.currentTarget.getAttribute('data-ispremium') == "true"){
                 sessionStorage.removeItem('premiumUser')
               }else{
               sessionStorage.setItem('premiumUser',true)
