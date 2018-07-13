@@ -16,7 +16,7 @@ var addGetPremium_btn = function () {
   
   $(this.$getPremium_btn[0]).click(function( event ) {
               event.preventDefault();
-              if(event.currentTarget.getAttribute('data-ispremium') == "true"){
+              if(event.currentTarget.getAttribute('data-isPremium') == "true"){
                 sessionStorage.removeItem('premiumUser')
               }else{
               sessionStorage.setItem('premiumUser',true)
@@ -57,8 +57,6 @@ var addPayForDetails_popup = function() {
   }
 }
 
-
-
 var extendBody = function adElementToBody(){
   addGetPremium_btn();
   addPayForDetails_popup();
@@ -91,16 +89,18 @@ var anonymize = function() {
 var itemsBringUpAlert = function(){
     var itemTopLayers = document.getElementsByClassName('fluid-thumbnail-grid-image-image-container')
     var itemAdminLayers = document.getElementsByClassName('home-fluid-thumbnail-grid-author')
-        for(var i = 0; i < itemTopLayers.length; i++){
-          $(itemTopLayers[i]).click(function( event ) {
-              event.preventDefault();
-              document.getElementById('payForDetails_popup').style.display = "block"              
-        });
-        $(itemAdminLayers[i]).click(function( event ) {
-              event.preventDefault();
-              document.getElementById('payForDetails_popup').style.display = "block"
-        });
-    }    
+    if (document.getElementById('getPremium_btn').getAttribute('data-isPremium') == false ) {
+          for(var i = 0; i < itemTopLayers.length; i++){
+            $(itemTopLayers[i]).click(function( event ) {
+                event.preventDefault();
+                document.getElementById('payForDetails_popup').style.display = "block"              
+          });
+          $(itemAdminLayers[i]).click(function( event ) {
+                event.preventDefault();
+                document.getElementById('payForDetails_popup').style.display = "block"
+          });
+      }
+    }
 }
 
 window.addEventListener("DOMContentLoaded", extendBody , false);
