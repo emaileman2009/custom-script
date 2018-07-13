@@ -89,18 +89,22 @@ var anonymize = function() {
 var itemsBringUpAlert = function(){
     var itemTopLayers = document.getElementsByClassName('fluid-thumbnail-grid-image-image-container')
     var itemAdminLayers = document.getElementsByClassName('home-fluid-thumbnail-grid-author')
-    if (document.getElementById('getPremium_btn').getAttribute('data-isPremium') == false ) {
+    
           for(var i = 0; i < itemTopLayers.length; i++){
             $(itemTopLayers[i]).click(function( event ) {
-                event.preventDefault();
-                document.getElementById('payForDetails_popup').style.display = "block"              
-          });
-          $(itemAdminLayers[i]).click(function( event ) {
+              if (document.getElementById('getPremium_btn').getAttribute('data-isPremium') == false ) {
                 event.preventDefault();
                 document.getElementById('payForDetails_popup').style.display = "block"
+              }
+          });
+          $(itemAdminLayers[i]).click(function( event ) {
+            if (document.getElementById('getPremium_btn').getAttribute('data-isPremium') == false ) {
+                event.preventDefault();
+                document.getElementById('payForDetails_popup').style.display = "block"
+            }
           });
       }
-    }
+    
 }
 
 window.addEventListener("DOMContentLoaded", extendBody , false);
