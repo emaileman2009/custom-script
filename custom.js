@@ -92,13 +92,13 @@ var itemsBringUpAlert = function(){
     
           for(var i = 0; i < itemTopLayers.length; i++){
             $(itemTopLayers[i]).click(function( event ) {
-              if (document.getElementById('getPremium_btn').getAttribute('data-isPremium') == false ) {
+              if (document.getElementById('getPremium_btn').getAttribute('data-isPremium') == "false" ) {
                 event.preventDefault();
                 document.getElementById('payForDetails_popup').style.display = "block"
               }
           });
           $(itemAdminLayers[i]).click(function( event ) {
-            if (document.getElementById('getPremium_btn').getAttribute('data-isPremium') == false ) {
+            if (document.getElementById('getPremium_btn').getAttribute('data-isPremium') == "false" ) {
                 event.preventDefault();
                 document.getElementById('payForDetails_popup').style.display = "block"
             }
