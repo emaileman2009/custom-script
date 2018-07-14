@@ -35,7 +35,7 @@ var addPayForDetails_popup = function() {
         "<!-- Modal content -->",
         "<div class='payForDetails_popup_content'>",
          "<span class='payForDetails_popup_close'>&times;</span>",
-         "<p class="notPaidMsg">You did not pay yet!</p>",
+         "<p class='notPaidMsg'>You did not pay yet!</p>",
        "</div>",
       "</div>",
   ].join("\n")); 
