@@ -77,11 +77,13 @@ var isUserLoggedIn = function () {
 
 var anonymize = function() {
             var items = document.getElementsByClassName('home-fluid-thumbnail-grid-author-avatar')
+             if (document.getElementById('getPremium_btn').getAttribute('data-isPremium') == "false" ) {    
                 for(var i = 0; i < items.length; i++)
-                {
-                    console.log("HIDING ELEMENTS SINCE THE USER DID NOT PAY YET")
-                    console.log(items.item(i).setAttribute("hidden",true))
-                }
+                  {
+
+                      console.log(items.item(i).setAttribute("hidden",true))
+                  }
+             }
     }
 
 
