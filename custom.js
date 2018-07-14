@@ -2,7 +2,7 @@ var addGetPremium_btn = function (additionalClass) {
   this.$getPremium_btn;
   if ( sessionStorage.getItem('premiumUser') ){
     $getPremium_btn = $([
-      `<button id='getPremium_btn' data-isPremium='true' class=becomePremium_btn ${additionalClass} >`,
+      `<button id='getPremium_btn' data-isPremium='true' class='becomePremium_btn ${additionalClass}' >`,
         "Enjoy! You Are Premium",
       "</button>",
     ].join("\n"));    
