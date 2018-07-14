@@ -32,10 +32,9 @@ body {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.becomePremium_btn {
+.becomePremium_btn_in_popup {
  background: #3865e5;
- margin: auto;
-    
+ margin: auto;    
 }
 
 
