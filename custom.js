@@ -1,8 +1,8 @@
-var addGetPremium_btn = function () {
+var addGetPremium_btn = function (additionalClass) {
   this.$getPremium_btn;
   if ( sessionStorage.getItem('premiumUser') ){
     $getPremium_btn = $([
-      "<button id='getPremium_btn' data-isPremium='true' class='becomePremium_btn'>",
+      `<button id='getPremium_btn' data-isPremium='true' class=becomePremium_btn ${additionalClass} >`,
         "Enjoy! You Are Premium",
       "</button>",
     ].join("\n"));    
@@ -58,7 +58,7 @@ var addPayForDetails_popup = function() {
 }
 
 var extendBody = function adElementToBody(){
-  addGetPremium_btn();
+  addGetPremium_btn("test2");
   addPayForDetails_popup();
 }
 
