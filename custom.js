@@ -43,6 +43,8 @@ var addPayForDetails_popup = function() {
   document.body.appendChild(this.$payForDetails_popup[0]);
   
   var popup = document.getElementById('payForDetails_popup')
+
+  addGetPremium_btn(popup, "becomePremium_btn_in_popup");
   
   // When the user clicks on <span> (x), close the modal
   var popup_close_button = popup.getElementsByClassName('payForDetails_popup_close').onclick =
