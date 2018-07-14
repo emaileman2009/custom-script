@@ -8,7 +8,7 @@ var addGetPremium_btn = function (targetElement, additionalClass) {
     ].join("\n"));    
   }else{
     $getPremium_btn = $([
-      "<button id='getPremium_btn' data-isPremium='false' class='becomePremium_btn'>",
+      `<button id='getPremium_btn' data-isPremium='false' class='becomePremium_btn ${additionalClass}' >`,
         "Become Premium",
       "</button>",
     ].join("\n"));
@@ -33,7 +33,7 @@ var addPayForDetails_popup = function() {
    this.$payForDetails_popup = $([
       "<div id='payForDetails_popup' class='payForDetails_popup'>",
         "<!-- Modal content -->",
-        "<div class='payForDetails_popup_content'>",
+        "<div id='payForDetails_popup_msg' class='payForDetails_popup_content'>",
          "<span class='payForDetails_popup_close'>&times;</span>",
          "<p class='notPaidMsg'>You did not pay yet!</p>",
        "</div>",
@@ -42,9 +42,9 @@ var addPayForDetails_popup = function() {
 
   document.body.appendChild(this.$payForDetails_popup[0]);
   
-  var popup = document.getElementById('payForDetails_popup')
+  var msg = document.getElementById('payForDetails_popup_msg')
 
-  addGetPremium_btn(popup, "becomePremium_btn_in_popup");
+  addGetPremium_btn(msg, "becomePremium_btn_in_popup");
   
   // When the user clicks on <span> (x), close the modal
   var popup_close_button = popup.getElementsByClassName('payForDetails_popup_close').onclick =
