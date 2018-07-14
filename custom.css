@@ -33,9 +33,14 @@ body {
 }
 
 .becomePremium_btn_in_popup {
- background: #3865e5;
  margin: auto;    
 }
+
+.becomePremium_btn_in_popup {
+ background: #3865e5; 
+}
+
+
 
 
 .notPaidMsg {
