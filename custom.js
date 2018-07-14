@@ -1,4 +1,4 @@
-var addGetPremium_btn = function (additionalClass) {
+var addGetPremium_btn = function (targetElement, additionalClass) {
   this.$getPremium_btn;
   if ( sessionStorage.getItem('premiumUser') ){
     $getPremium_btn = $([
@@ -24,8 +24,8 @@ var addGetPremium_btn = function (additionalClass) {
               location.reload();            
   });
   
-  var filterSection = document.getElementsByClassName('col-3 visible-tablet')[0]
-  filterSection.appendChild(this.$getPremium_btn[0]);
+  
+  targetElement.appendChild(this.$getPremium_btn[0]);
   
 }
 
@@ -58,7 +58,8 @@ var addPayForDetails_popup = function() {
 }
 
 var extendBody = function adElementToBody(){
-  addGetPremium_btn("test2");
+  var filterSection = document.getElementsByClassName('col-3 visible-tablet')[0]
+  addGetPremium_btn(filterSection, "");
   addPayForDetails_popup();
 }
 
